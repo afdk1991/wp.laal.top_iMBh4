@@ -1,0 +1,51 @@
+{
+  "name": "mixmlaal-fullstack",
+  "version": "0.0.0.4",
+  "description": "MIXMLAAL Multi-Stack Backend Admin System",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:admin": "npm run dev --workspace=apps/admin",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "build:admin": "npm run build --workspace=apps/admin",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:frontend": "npm run build --workspace=apps/frontend",
+    "build": "npm run build:admin && npm run build:api && npm run build:frontend",
+    "start:admin": "npm run preview --workspace=apps/admin",
+    "start:api": "npm run start --workspace=apps/api",
+    "start:frontend": "npm run preview --workspace=apps/frontend",
+    "test:api": "npm run test --workspace=apps/api",
+    "test:admin": "npm run test --workspace=apps/admin",
+    "test:frontend": "npm run test --workspace=apps/frontend",
+    "test": "npm run test:api && npm run test:admin && npm run test:frontend",
+    "lint:api": "npm run lint --workspace=apps/api",
+    "lint:admin": "npm run lint --workspace=apps/admin",
+    "lint:frontend": "npm run lint --workspace=apps/frontend",
+    "lint": "npm run lint:api && npm run lint:admin && npm run lint:frontend",
+    "lint:fix": "npm run lint:fix --workspace=apps/frontend",
+    "format": "npm run format --workspace=apps/frontend",
+    "clean": "rm -rf apps/admin/dist apps/api/build apps/frontend/dist",
+    "install:all": "npm install && npm run install --workspace=apps/api && npm run install --workspace=apps/admin && npm run install --workspace=apps/frontend",
+    "update:all": "npm update && npm run update --workspace=apps/api && npm run update --workspace=apps/admin && npm run update --workspace=apps/frontend"
+  },
+  "devDependencies": {
+    "lerna": "^6.6.2",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "jest": "^30.1.2"
+  },
+  "keywords": [
+    "mixmlaal",
+    "admin",
+    "vue3",
+    "spring-boot",
+    "fastapi",
+    "react",
+    "spring-cloud"
+  ],
+  "author": "MIXMLAAL",
+  "license": "ISC"
+}

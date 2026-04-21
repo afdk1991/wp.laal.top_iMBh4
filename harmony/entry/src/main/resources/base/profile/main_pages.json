@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Home",
+    "pages/Ride",
+    "pages/Mall",
+    "pages/Profile",
+    "pages/Login",
+    "pages/Register"
+  ]
+}
